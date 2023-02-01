@@ -63,14 +63,53 @@ string1[0] // retorna C
 string1[2] // retorna s
 string1[5] // Retorna espacio
 ~~~
-en case de que se quiera retornar a la inversa se pueden usar indices de negativos:
+En caso de que se quiera retornar a la inversa se pueden usar indices de negativos:
 ~~~
 string1[-1] // Retorna r
 string1[-4] // Retorna u
 ~~~
 
-Si quieremos saber el tamaño del estring usamos el metodo `len(string)`
+Si quieremos saber el tamaño del estring usamos el metodo `len(string)` de esta manera:
+~~~
+string1 = "Cisco Router"
+len(string1) // Retorna 12 
+~~~
 
+En caso de que lo que necesitemos no sepamos cual es el indice de una letra dentro del string podemos usar la función index `string.index("character")`:
+~~~
+string1 = "Cisco Router"
+string1.index("i") // Retorna el indice de la primera letra i en el string en este caso 0
+~~~
 
+En caso de que lo que necesitemos las ocurrencias de una letra dentro del string podemos usar la función count `string.count("character")`:
+~~~
+string1 = "Cisco Router"
+string1.count("o") // Retorna 2
+~~~
 
+En caso de que lo que necesitemos no sepamos cual es el indice de un sub string dentro del string podemos usar la función find `string.index("substring")`. En caso de no encontrarlo retorna -1.
+~~~
+string1 = "Cisco Router"
+string1.find("sco") // Retorna el indice de la primera letra del substring en el string en este caso 2
+~~~
+
+Para transformar los string tenemos `string.lower()` y `string.upper()` para pasar todas las letras a mayusculas o a minusculas respectivamente.
+
+Si quieres verificar el inicio o final de un string puiedes usar `string.startswith("character")` y `strings.endswith("character")` que retornan true o false si el caracter corresponde con el del string.
+
+En el caso de que el string tiene espacios no deseados al inicio o final de este se puede usar el metodo `strimg.trim()` para eliminatrlos. En caso de que sean caraceteres se pueden eliminar poniendo el caracter en el metodo `string.trim("character")`
+
+En caso de que se quieran remplazar mas cahracteres se puede usar el metodo `string.replace("character_in","character_out")`
+
+Para separar in string podemos usar el metodo `string.plit("plite_character")` que genera un arreglo de strings:
+~~~
+string1 = "Cisco, Junper, HP, Avaya, Nortel"
+string1.split(", ") // Retorna ['Cisco', 'Junper', 'HP', 'Avaya', 'Nortel']
+~~~
+
+Si al contrario se quiere unit se quiere el unir existe el metodo `string.join()` que une un caracter a cada caracter 
+~~~
+string1 = "Cisco Router"
+"_".join(string1) // Retorna "C_i_s_c_o_ _R_o_u_t_e_r"
+~~~
 
